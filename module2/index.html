@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    background-color: #2a2e2e;
+}
+
+body{
+    /**remove default margins**/
+    
+    background-color: gray;
+}
+
+p {
+    width: 50%;
+    border: 1px solid black;
+    float: left;
+    padding:10px;
+}
+
+section{
+    width: 600px;
+    clear: left;
+    color: #00FF90;
+}
+
+#p1{
+    background-color: #A52A2A;
+    float:left;
+}
+#p2{
+    background-color: #DEB887;
+    float:right;
+}
+#p3{
+    background-color: #5F9EA0;
+    clear: both;
+}
+#p4{
+    background-color: #FF7F50;
+}
+
+#bg {
+    width: 500px;
+    height: auto;
+}
+
+#gif{
+    background-image: url("kendrick-drake.gif");
+    float: right;
+    background-size: 200px auto;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+#box{
+     /**width is for width of content not total width**/
+    padding: 10px 10px 10px 10px;
+    background-color: blue;
+    border: 5px solid black;
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+}
+#content{
+    background-color: #90EE90;
+
+}
+
+#credits{
+    background-color: #900000;
+    width: 300px;
+    height: 300px;
+    background-image: url("homeless.jpg");
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    background-position: bottom;
+    /**or background: url() no-repeat 
+            right center blue**/ 
+}
+    
+h1 {
+    margin-bottom: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+<!-- there are defualt margins
+    the content id green is covering all the box id blue-->
+<div id="box">
+    <div id="content">stupid random text here bruh. Goddam this shit is ugly. I am Killmonger
+        No one's perfect
+        But no one's worthless
+        We ain't deservin' of everything Heaven and Earth is
+        But word is, good (This is my home)
+        Said no one's perfect, but no ones worth this
+        We ain't deservin' of everything heaven and Earth is
+        But word is, good (Northern California)
+
+        Ayy, they better call a paramedic in the street
+        I got leverage in the street
+        I'm a California nigga and I'm heavy in the streets
+        .22 or .23, I'm heavy with the heat
+        Hit you with this chop, paramedics can't save you (Can't save you)
+        Really in the field c'mon bro, I know that ain't you (No, it ain't you)
+        2018, hell naw, I ain't gon fade you
+        Gon' paint you, TDE and SOB, we can't lose
+        Niggas bitch made
+        That's just somethin' I can't relate to (Can't relate to)
+        Turn on the gang
+        That's just somethin' that I can't do (No, I can't do)
+        Fall out over a bitch
+        That's just somethin' that I can't do (No, I can't do)
+        Rip every beat I get on, I was made to (I was made to)
+        This Glock get to growlin', somethin' like a black panther
+        Tryna touch a mil, fuck sayin "get yo bands up"
+        Fuckin' with the gang, yeah, I had to man up
+        One fist in the air, I ain't finna put my hands up (Gang!)
+    </div>
+    
+</div>
+<div id="bg">
+    <div id="gif"> wop wop wop</div>
+    <div id="credits">
+        SOB X RBE
+        Featuring Zacari & Kendrick Lamar
+        Produced by Sounwave, CuBeatz & Dahi
+        
+    </div>
+</div>
+
+
+
+<div>
+    <p id="p1">
+        Hello, new world, all the boys and girls
+        I got some true stories to tell
+        You're back outside, but they still lied
+        Whoa, oh, oh, oh (yeah)
+    </p>
+    <p id="p2">
+        Take off the foo-foo
+        Take off the clout chase
+        Take off the Wi-Fi
+        Take off the money phone
+        Take off the car loan
+        Take off the flex and the white lies
+        Take off the weird-ass jewelry
+        I'ma take ten steps
+        Then I'm takin' off top five
+        Take off them fabricated streams
+        And them microwave memes
+        It's a real world outside (take that shit off)
+        Take off your idols
+        Take off the runway
+        I take off to Cairo (take that shit off)
+        Take off to Saint-Tropez
+        Five day stay, take a quarter mil'
+        Hell, if I know (take that shit off)
+        Take off the false flag
+        Take off perception
+        Take off the cop with the eye patch (take that shit off)
+        Take off the unloyal
+        Take off the unsure
+        Take off decisions I lack (take it off)
+        Take off the fake deep
+        Take off the fake woke
+        Take off the I'm broke, I care (take it off)
+        Take off the gossip
+        Take off the new logic, that if I'm rich, I'm rare (take it off)
+        Take off the Chanel
+        Take off the Dolce
+        Take off the Birkin bag (take it off)
+        Take all that designer bullshit off
+        And what do you have? (Bitch)
+    </p>
+    <p id="p3">
+        Huh, huh, uh, you ugly as fuck
+        (You out of pocket)
+        Huh, two ATMs (hah, hah, hah, hah)
+        You steppin' or what? (You out of pocket, huh)
+        Who you think they talk 'bout?
+        Talk about us (you out of pocket, shoot, shoot, shoot)
+        Who you think they copy off? (Brrt, brrt, brrt, brrt)
+        Copy off us (get back in pocket)
+    </p>
+    <p id="p4">
+        The world in a panic
+        The women is stranded
+        The men on a run
+        The prophets abandoned
+        The Lord take advantage
+        The market is crashin'
+        The industry wants
+        Niggas and bitches to sleep in a box
+        While they makin' a mockery followin' us
+        This ain't Monopoly
+        Watchin' for love
+        This ain't monogamy
+        Y'all gettin' fucked
+        Jumpin' on what the hell is that?
+        I gotta relax when I feel (huh, facts)
+        All of my descendants
+        They come in my sleep and say I am too real (huh, facts)
+        I'm done with the sensitive takin' it personal
+        Done with the black and the white
+        The wrong and the right
+        You hopin' for change and clericals
+        I know the feelings that came with burial's cries (bitch)
+    </p>
+    <section>caveman boyz,jojoruski, On July 29, making his acting debut as homeless drug abuser Laces. His line ma nigga, ma nigga, ma nigga.</section>
+</div>
+
+</body>
+</html>

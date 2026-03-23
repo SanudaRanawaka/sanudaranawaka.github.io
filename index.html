@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello Coursera!</title>
+    <title>Futbol yea</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px;
+            font-size: 18px;
+            padding: 10px;
+            background: #222;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Hello Coursera! wow browsersync</h1>
+
+<h1>⚽ Premier League Matches</h1>
+
+<ul id="matches"></ul>
+
+<script>
+const apiKey = '72754affd7ed4dbbab55b2d7fd9d3bd5'; // 🔴 replace with your new key
+
+fetch('https://api.football-data.org/v4/competitions/CL/matches', {
+    method: 'GET',
+    headers: {
+        'X-Auth-Token': apiKey
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error("API request failed");
+    }
+    return response.json();
+})
+.then(data => {
+    const matchesList = document.getElementById('matches');
+    matchesList.innerHTML = "";
+
+    data.matches.slice(0, 10).forEach(match => {
+        const li = document.createElement('li');
+
+        const home = match.homeTeam.name;
+        const away = match.awayTeam.name;
+
+        const homeScore = match.score.fullTime.home ?? "-";
+        const awayScore = match.score.fullTime.away ?? "-";
+
+        li.textContent = `${home} ${homeScore} - ${awayScore} ${away}`;
+
+        matchesList.appendChild(li);
+    });
+})
+.catch(error => {
+    console.error('Error:', error);
+
+    const matchesList = document.getElementById('matches');
+    matchesList.innerHTML = "<li>⚠️ Failed to load matches</li>";
+});
+</script>
+
 </body>
 </html>
